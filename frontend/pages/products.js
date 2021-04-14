@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
-import AuthProducts from "../components/AuthProduct";
+import AuthStudents from "../components/AuthStudent";
 import Styles from "../styles/Home.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -11,12 +11,12 @@ import config from "../config/config";
 const URL = `${config.URL}/students`;
 const Students = ({ token }) => {
   const [students, setStudents] = useState({
-    list: [{ id: 1, fname: "Foo", surname: "Bar", major: "CoE", gpa: 2.12 }],
+    list: [{ id: 1, name: "Foo", numberproduct: "Bar" }],//, major: "CoE", gpa: 2.12
   });
-  const [fname, setFname] = useState("");
-  const [surname, setSurname] = useState("");
-  const [major, setMajor] = useState("");
-  const [gpa, setGpa] = useState(0);
+  const [name, setname] = useState("");
+  const [numberproduct, setnumberproduct] = useState("");
+  // const [major, setMajor] = useState("");
+  // const [gpa, setGpa] = useState(0);
 
   useEffect(() => {
     getStudents();
@@ -29,10 +29,10 @@ const Students = ({ token }) => {
 
   const updateStudent = async (id) => {
     let student = await axios.put(`${URL}/${id}`, {
-      fname,
-      surname,
-      major,
-      gpa,
+      name,
+      numberproduct,
+      // major,
+      // gpa,
     });
     setStudents(student.data);
   };
@@ -42,11 +42,11 @@ const Students = ({ token }) => {
     setStudents(student.data);
   };
 
-  const addStudent = async (fname, surname, major, gpa) => {
+  const addStudent = async (name, numberproduct) => {
     let student = await axios.post(
       `${config.URL}/students`,
 
-      { fname, surname, major, gpa }
+      { name, numberproduct}
     );
     setStudents(student.data);
   };
@@ -55,8 +55,7 @@ const Students = ({ token }) => {
     if (students.list && students.list.length)
       return students.list.map((item, index) => (
         <li key={index}>
-          name: {item.fname}, surname: {item.surname}, major: {item.major}, gpa:{" "}
-          {item.gpa}
+          name: {item.name}, numberproduct: {item.numberproduct}
           <button onClick={() => updateStudent(item.id)}>Update</button>
           <button onClick={() => deleteStudent(item.id)}>Delete</button>
         </li>
@@ -68,40 +67,28 @@ const Students = ({ token }) => {
         <Navbar />
         <br></br>
         <ul>{printStudents()}</ul>
-        <h2>Insert Student</h2>
+        <h2>Insert Products</h2>
 
         <input
           /*name*/
           type="text"
           placeholder="name"
-          onChange={(e) => setFname(e.target.value)}
+          onChange={(e) => setname(e.target.value)}
         ></input>
         <br></br>
 
         <input
-          /*surname*/
+          /*numberproduct*/
           type="text"
-          placeholder="surname"
-          onChange={(e) => setSurname(e.target.value)}
+          placeholder="numberproduct"
+          onChange={(e) => setnumberproduct(e.target.value)}
         ></input>
         <br></br>
-        <input
-          /*major*/
-          type="text"
-          placeholder="major"
-          onChange={(e) => setMajor(e.target.value)}
-        ></input>
-        <br></br>
-        <input
-          /*gpa*/
-          type="number"
-          placeholder="gpa"
-          onChange={(e) => setGpa(e.target.value)}
-        ></input>
-        <br></br>
+       
+       
         <div class="button">
-          <button onClick={() => addStudent(fname, surname, major, gpa)}>
-            Add
+          <button onClick={() => addStudent(name, numberproduct, major, gpa)}>
+            Add to cat
           </button>
         </div>
       </div>
@@ -109,7 +96,7 @@ const Students = ({ token }) => {
   );
 };
 
-export default AuthProducts(Students);
+export default AuthStudents(Students);
 
 export function getServerSideProps({ req, res }) {
   return { props: { token: req.cookies.token || "" } };
