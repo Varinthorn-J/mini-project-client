@@ -1,0 +1,36 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    
+}
+
+button{
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  border-radius: 20px;
+	border: 1px solid #000000;
+	color: #030303;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 12px 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  /* color: rgb(255, 255, 255);
+  background-color: rgb(128, 167, 240); */
+}
+h1{
+  color: rgb(185, 177, 99);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
