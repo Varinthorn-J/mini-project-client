@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     /*background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
-    background-color: #CCFFFF
+    background-color: #7890dd
     
 }
 
@@ -22,11 +22,13 @@ button{
 
 }
 h1{
-  color: rgb(75, 74, 68);
+  color: rgb(51, 50, 46);
 }
 h2{
-  color: red;
-  box-shadow: #030303;
+  color: rgb(238, 0, 0);
+ 
+ 
+  
 }
 
 a {

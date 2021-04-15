@@ -52,7 +52,7 @@ const Products = ({ token }) => {
       return products.list.map((item, index) => (
         <li key={index}>
           <div className={Styles.pic}>
-            <Image src="/ega.jpg" width={200} height={200} />
+            <Image  className={Styles.immage} src="/ega.jpg" width={200} height={200} />
             <br></br>
           </div>
           name: {item.name}
@@ -69,12 +69,12 @@ const Products = ({ token }) => {
         <Navbar />
         <br></br>
 
-        <h1>Insert Products</h1>
+        <h1>เพิ่มสินค้า</h1>
         <input
           className={Styles.formproduct}
           /*name*/
           type="text"
-          placeholder="name"
+          placeholder="ชื่อสินค้า"
           onChange={(e) => setname(e.target.value)}
         ></input>
         <br></br>
@@ -83,14 +83,17 @@ const Products = ({ token }) => {
           className={Styles.formproduct}
           /*numberproduct*/
           type="text"
-          placeholder="number"
+          placeholder="จำนวน"
           onChange={(e) => setnumberproduct(e.target.value)}
         ></input>
         <br></br>
 
         <div class="button">
           <button onClick={() => addProducts(name, numberproduct)}>
-            Add to cat
+            เพิ่มลงรถเข็น
+          </button>
+          <button onClick={() => getProducts(name, numberproduct)}>
+            ดำเนินการชำระเงิน
           </button>
         </div>
         <ul>{printProducts()}</ul>

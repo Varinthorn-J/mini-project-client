@@ -22,7 +22,7 @@ export default function Home({ token }) {
         <Navbar />
         <h1>หูฟัง Gaming </h1>
         <div className={styles.pic}>
-          <Image src="/k5.jpg" alt="my picture" width={200} height={200} />
+          <Image className={styles.immage} src="/k5.jpg" alt="my picture" width={200} height={200} />
 
           <div class="button">
             <a href="/k5" className={styles.card}>
@@ -30,26 +30,29 @@ export default function Home({ token }) {
             </a>
             <h2>$19.66</h2>
           </div>
+        
           <br></br>
-
-          <Image src="/ega.jpg" alt="my picture" width={200} height={200} />
+          <div>
+          <Image className={styles.immage} src="/ega.jpg" alt="my picture" width={200} height={200} />
           <div class="button">
             <a href="/ega" className={styles.card}>
               <h3>EGA หูฟังเกม Type-H6 - Black</h3>
             </a>
             <h2>$16</h2>
+            </div>
           </div>
           <br></br>
-
-          <Image src="/signo.jpg" alt="my picture" width={200} height={200} />
+          <div >
+          <Image className={styles.immage} src="/signo.jpg" alt="my picture" width={200} height={200} />
           <div class="button">
             <a href="/signo" className={styles.card}>
               <h3>SIGNO หูฟังเกม HP-829</h3>
             </a>
             <h2>$16.63</h2>
+            </div>
           </div>
           <br></br>
-        </div>
+      </div>
       </div>
     </Layout>
   );

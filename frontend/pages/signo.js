@@ -27,7 +27,7 @@ export default function Home({ token }) {
         <h1>หูฟัง Gaming </h1>
         <div className={styles.pic}>
          
-          <Image src="/signo.jpg" alt="my picture" width={200} height={200} />
+          <Image  className={styles.immage} src="/signo.jpg" alt="my picture" width={200} height={200} />
           <div class="button">
             <a href="/foo" className={styles.card}>
               <h3>SIGNO หูฟังเกม HP-829..<button onClick={copyText}> Copy </button></h3>
@@ -40,7 +40,7 @@ export default function Home({ token }) {
             </a><br></br>
             <div className={styles.home}>
           <a href="/products" className={styles.card}> 
-              <h3>go to cat</h3>
+              <h3>ไปยังรถเข็น</h3>
             </a></div>
                
           </div>

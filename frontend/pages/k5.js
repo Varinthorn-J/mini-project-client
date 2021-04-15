@@ -26,7 +26,7 @@ export default function Home({ token }) {
         <Navbar />
         <h1>หูฟัง Gaming </h1>
         <div className={styles.pic}>
-          <Image src="/k5.jpg" alt="my picture" width={300} height={300} />        
+          <Image className={styles.immage} src="/k5.jpg" alt="my picture" width={300} height={300} />        
           <h3>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue..<button onClick={copyText}> Copy </button></h3>
           ชื่อแบรนด์ : Onikuma <br></br>
           รุ่น : K5 Pro <br></br>
@@ -37,7 +37,7 @@ export default function Home({ token }) {
          <br></br>        
           <div className={styles.home}>
           <a href="/products" className={styles.card}> 
-              <h3>go to cat</h3>
+              <h3>ไปยังรถเข็น</h3>
             </a></div>
         </div>
         <br></br>

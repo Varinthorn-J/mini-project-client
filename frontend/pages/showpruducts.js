@@ -26,6 +26,10 @@ const product = ({ token }) => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
         <li key={index}>
+           <div className={Styles.pic}>
+            <Image  className={styles.immage} src="/ega.jpg" width={200} height={200} />
+            <br></br>
+          </div>
           name: {item.name}, numberproduct: {item.numberproduct}
         </li>
       ));
@@ -36,8 +40,9 @@ const product = ({ token }) => {
       <div className={Styles.container}>
         <Navbar /><br></br>
         <br></br>
+         <ul>{printProducts()}</ul>
         {JSON.stringify(products.products)}
-        <ul>{printProducts()}</ul>
+       
       </div>
     </Layout>
   );
