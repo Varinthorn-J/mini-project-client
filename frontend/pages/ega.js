@@ -37,7 +37,7 @@ export default function Home({ token }) {
          <br></br>
           <div className={styles.home}>
           <a href="/products" className={styles.card}>
-              <h3>go to cat</h3>
+              <h3>ไปยังรถเข็น</h3>
             </a></div>
         </div>
         <br></br>
