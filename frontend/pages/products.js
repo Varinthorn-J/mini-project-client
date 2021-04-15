@@ -46,6 +46,8 @@ const Products = ({ token }) => {
     setProducts(product.data);
   };
 
+
+
   const printProducts = () => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
@@ -55,16 +57,21 @@ const Products = ({ token }) => {
           <button onClick={() => deleteProducts(item.id)}>Delete</button>
         </li>
       ));
+      
   };
+  
   return (
+    
     <Layout>
       <div className={Styles.container}>
+        
         <Navbar />
         <br></br>
         <ul>{printProducts()}</ul>
         <h2>Insert Products</h2>
 
         <input
+          className={Styles.formproduct}
           /*name*/
           type="text"
           placeholder="name"
@@ -73,6 +80,7 @@ const Products = ({ token }) => {
         <br></br>
 
         <input
+          className={Styles.formproduct}
           /*numberproduct*/
           type="text"
           placeholder="number"
@@ -84,6 +92,7 @@ const Products = ({ token }) => {
           <button onClick={() => addProducts(name, numberproduct)}>
             Add to cat
           </button>
+          <button onClick={() => getProducts(name, numberproduct)}>get</button>
         </div>
       </div>
     </Layout>

@@ -26,6 +26,9 @@ const Profile1 = ({ token }) => {
       console.log(e);
     }
   };
+  const copyText = () => {
+    navigator.clipboard.writeText(token);
+  };
 
   return (
     <Layout>
@@ -35,11 +38,13 @@ const Profile1 = ({ token }) => {
       <div className={styles.container}>
         <Navbar />
         <h1>User profile</h1>
+
         <div>
-          <b>Token:</b> {token.substring(0, 15)}... <br />
-          <br />
-          {JSON.stringify(user)}
-        </div>
+          <b>Token:</b> {token.substring(0, 15)}...
+          <button onClick={copyText}> Copy token </button>
+        </div><br></br>
+        <div>{JSON.stringify(user)}</div>
+        <br></br>
       </div>
     </Layout>
   );

@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 import withAuth from "../components/withAuth";
 import config from "../config/config";
+import Image from 'next/image'
 
 const Foo1 = ({ token }) => {
   const [foo, setFoo] = useState({});
@@ -13,9 +14,7 @@ const Foo1 = ({ token }) => {
   useEffect(() => {
     fnFoo();
   }, []);
-  useEffect(() => {
-    today();
-  }, []);
+ 
 
   const fnFoo = async () => {
     try {
@@ -30,63 +29,34 @@ const Foo1 = ({ token }) => {
     }
   };
 
-  /////date
-  function today(i) {
-    var today = new Date();
-    var dd = today.getDate() + 1;
-    var mm = today.getMonth() + 1;
-    var yyyy = today.getFullYear();
-
-    today = dd + "/" + mm + "/" + yyyy;
-
-    return today;
-  }
-  ///////
+ 
 
   return (
     <Layout>
-      <Head>
-        <title>Foo</title>
-      </Head>
       <div className={styles.container}>
         <Navbar />
-        <br></br>
-        <button
-          type="button"
-          onclick="document.getElementById('demo').innerHTML = Date()"
-        >
-          Click me to display Date and Time.
-        </button>
-        <p id="demo"></p>
-        <h1>Foo</h1>
-        <div className={styles.container}>
+        <div>
           <Head>
-            <title>Create Next App</title>
-            <link rel="icon" href="/favicon.ico" />
+            <title>Foo</title>
           </Head>
-          <main className={styles.main}>
-            <h1 className={styles.title}>Welcome to WPJ</h1>
+          
+          <div className={styles.foo}>
+            <a href="https://facebook.com" className={styles.card}>
+              <h3>Facebook </h3>
+            </a>
+            <a href="https:/google.com" className={styles.card}>
+              <h3>Google</h3>
+            </a>
+            <a href="https://www.instagram.com/?hl=en" className={styles.card}>
+              <h3>IG </h3>
+            </a>
+            <a href="https://www.youtube.com/" className={styles.card}>
+              <h3>Youtube </h3>
+            </a>
 
-            <div className={styles.grid}>
-              <a href="https://facebook.com" className={styles.card}>
-                <h3>Facebook &rarr;</h3>
-              </a>
-              <a href="https:/google.com" className={styles.card}>
-                <h3>Google&rarr;</h3>
-              </a>
-              <a
-                href="https://www.instagram.com/?hl=en"
-                className={styles.card}
-              >
-                <h3>IG &rarr;</h3>
-              </a>
-              <a href="https://www.youtube.com/" className={styles.card}>
-                <h3>Youtube &rarr;</h3>
-              </a>
-            </div>
-          </main>
+   
+          </div>
         </div>
-        );
       </div>
     </Layout>
   );

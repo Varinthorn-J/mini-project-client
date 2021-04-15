@@ -70,7 +70,7 @@ const Students = ({ token }) => {
         <ul>{printStudents()}</ul>
         <h2>Insert Student</h2>
 
-        <input
+        <input  className={Styles.formproduct}
           /*name*/
           type="text"
           placeholder="name"
@@ -78,21 +78,21 @@ const Students = ({ token }) => {
         ></input>
         <br></br>
 
-        <input
+        <input  className={Styles.formproduct}
           /*surname*/
           type="text"
           placeholder="surname"
           onChange={(e) => setSurname(e.target.value)}
         ></input>
         <br></br>
-        <input
+        <input  className={Styles.formproduct}
           /*major*/
           type="text"
           placeholder="major"
           onChange={(e) => setMajor(e.target.value)}
         ></input>
         <br></br>
-        <input
+        <input  className={Styles.formproduct}
           /*gpa*/
           type="number"
           placeholder="gpa"
@@ -105,6 +105,8 @@ const Students = ({ token }) => {
           </button>
         </div>
       </div>
+     
+
     </Layout>
   );
 };

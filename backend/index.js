@@ -18,7 +18,7 @@ let students = {
 };
 let products = {
   list: [
-    { id: 1, name: "Warinthon", numberproduct: "Jaitrong"},
+    { id: 1, name: "Car", numberproduct: 2 },
   ],
 };
 
@@ -103,7 +103,7 @@ router
       res.json({ status: "Student Error can't find!" });
     }
   });
-/////////////////////////////////////////////////////////
+
 //product
 router.route("/products").get((req, res) => res.json(products));
 router.post(
@@ -162,7 +162,7 @@ router
     }
   });
 
-/////////////////////////////////////////////////////////////
+//login
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", { session: false }, (err, user, info) => {
     console.log("Login: ", req.body, user, err, info);
