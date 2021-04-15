@@ -30,7 +30,7 @@ export default function Login({ token }) {
   };
 
   const loginForm = () => (
-    <div >
+    <div class = {styles.gridContainer}>
       <div>
         <input
           type="text"
@@ -73,7 +73,7 @@ export default function Login({ token }) {
           check: {ischeck}
         </div>
         <br />
-        {loginForm()}<br></br>
+        {loginForm()}
         <div>
           <input
             type="checkbox"

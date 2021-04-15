@@ -1,32 +1,32 @@
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
-import AuthStudents from "../components/AuthStudent";
+import AuthProducts from "../components/AuthPruduct";
 import Styles from "../styles/Home.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import config from "../config/config";
 
-const URL = `${config.URL}/students`;
-const student = ({ token }) => {
-  const [students, setStudents] = useState({
-    list: [{ id: 1, fname: "Foo", surname: "Bar", major: "CoE", gpa: 2.12 }],
+
+const URL = `${config.URL}/products`;
+const product = ({ token }) => {
+  const [products, setProducts] = useState({
+    list: [{ id: 1, name: "Foo", numberproduct: 15 }],
   });
 
   useEffect(() => {
-    getStudents();
+    getProducts();
   }, []);
 
-  const getStudents = async () => {
-    let student = await axios.get(`${config.URL}/students`);
-    setStudents(student.data);
+  const getProducts = async () => {
+    let product = await axios.get(`${config.URL}/products`);
+    setProducts(product.data);
   };
 
-  const printStudents = () => {
-    if (students.list && students.list.length)
-      return students.list.map((item, index) => (
+  const printProducts = () => {
+    if (products.list && products.list.length)
+      return products.list.map((item, index) => (
         <li key={index}>
-          name: {item.fname}, surname: {item.surname}, major: {item.major}, gpa:{" "}
-          {item.gpa}
+          name: {item.name}, numberproduct: {item.numberproduct}
         </li>
       ));
   };
@@ -36,14 +36,14 @@ const student = ({ token }) => {
       <div className={Styles.container}>
         <Navbar />
         <br></br>
-        {JSON.stringify(students.students)}
-        <ul>{printStudents()}</ul>
+        {JSON.stringify(products.products)}
+        <ul>{printProducts()}</ul>
       </div>
     </Layout>
   );
 };
 
-export default AuthStudents(student);
+export default AuthProducts(product);
 
 export function getServerSideProps({ req, res }) {
   return { props: { token: req.cookies.token || "" } };

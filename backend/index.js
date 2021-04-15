@@ -16,6 +16,11 @@ let students = {
     { id: 1, fname: "Warinthon", surname: "Jaitrong", major: "CoE", gpa: 2.5 },
   ],
 };
+let products = {
+  list: [
+    { id: 1, name: "Warinthon", numberproduct: "Jaitrong"},
+  ],
+};
 
 require("./passport.js");
 
@@ -101,18 +106,17 @@ router
 /////////////////////////////////////////////////////////
 //product
 router.route("/products").get((req, res) => res.json(products));
-
 router.post(
   "/products",
-  // passport.authenticate('jwt', { session: false }),
+
   (req, res) => {
     try {
       let newProduct = {};
       newProduct.id = products.list.length
         ? products.list[products.list.length - 1].id + 1
         : 1;
-      newProduct.product = req.body.product;
-      newProduct.number = req.body.number;
+      newProduct.name = req.body.name;
+      newProduct.numberproduct = req.body.numberproduct;
 
       products = { list: [...products.list, newProduct] };
       res.json(products);
@@ -128,7 +132,7 @@ router
     if (ID >= 0) {
       res.json(products.list[ID]);
     } else {
-      res.json({ status: "products Error can't find!" });
+      res.json({ status: "Student Error can't find!" });
     }
   })
 
@@ -136,12 +140,12 @@ router
     let ID = products.list.findIndex((item) => item.id === +req.params.pd_id);
 
     if (ID >= 0) {
-      products.list[ID].product = req.body.product;
-      products.list[ID].number = req.body.number;
-
+     products.list[ID].name = req.body.name;
+     products.list[ID].numberproduct = req.body.numberproduct;
+    
       res.json(products);
     } else {
-      res.json({ status: "Student Error can't find!" });
+      res.json({ status: "Product Error can't find!" });
     }
   })
 
@@ -154,9 +158,10 @@ router
       );
       res.json(products);
     } else {
-      res.json({ status: "Student Error can't find!" });
+      res.json({ status: "Product Error can't find!" });
     }
   });
+
 /////////////////////////////////////////////////////////////
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", { session: false }, (err, user, info) => {

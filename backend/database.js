@@ -14,7 +14,7 @@ let students = {
 }
 let products = {
     products: [
-        { id: 1, fname: "Warinthon", surname: "Jaitrongg", major: "CoE", gpa: 2.5 }
+        { id: 1, name: "Warinthon", numberproduct: 10}
     ]
 }
 

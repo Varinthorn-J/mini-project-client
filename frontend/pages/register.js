@@ -40,7 +40,7 @@ export default function Register({ token }) {
     const registerForm = () => (
         <div className={styles.gridContainer}>
             <div>
-                Username:
+                Username
             </div>
             <div>
                 <input type="text"
@@ -50,7 +50,7 @@ export default function Register({ token }) {
                 />
             </div>
             <div>
-                Email:
+                Email
             </div>
             <div>
                 <input type="email"
@@ -59,7 +59,7 @@ export default function Register({ token }) {
                     onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div>
-                Password:
+                Password
             </div>
             <div>
                 <input type="password"

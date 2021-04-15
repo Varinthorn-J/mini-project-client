@@ -7,7 +7,7 @@ const AuthProducts = WrappedComponent => {
         const router = useRouter()
         useEffect(() => {
             if (!token)
-                router.push('/ShowProducts')
+                router.push('/showpruducts')
         }, [token])
         return (<WrappedComponent {...props} />)
     }

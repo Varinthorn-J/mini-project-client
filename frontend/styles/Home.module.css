@@ -1,52 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+@import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur");
 .container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form{
-    background-color: rgba(226, 239, 241, 0.8);
-    text-align: left;
-    padding: 10px 0;
-    font-size: 1.2rem;
+.form {
+  background-color: rgba(226, 239, 241, 0.8);
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1.2rem;
 }
 .content {
-    min-width: 25vw;
+  min-width: 25vw;
 }
 
 .gridContainer {
-    min-height:auto;
-   max-width:auto;
-   margin:40px auto;
-   background:#FFF;
-   border-radius:2px;
-   box-shadow:0px 2px 3px rgba(0, 0, 0, 0.2);
-   display:flex;
-   flex-direction:column;
-   overflow:hidden;
-   animation: hi 0.5s;
-   
- 
+  min-height: auto;
+  max-width: auto;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: hi 0.5s;
+  border:#fff
 }
 
-.gridContainer>div {
-    background-color: rgba(226, 239, 241, 0.8);
-    text-align: left;
-    padding: 10px 0;
-    font-size: 1.2rem;
+.gridContainer > div {
+  background-color: rgba(245, 218, 245, 0.8);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1rem;
 }
 
-.gridContainer>div>input {
-    width: 100%;
-    padding: 2px 2px;
-    margin: 0px 0;
-    box-sizing: border-box;
-    font-size: 1.2rem;
+.gridContainer > div > input {
+  width: 100%;
+  padding: 2px 2px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border :rgba(226, 239, 241, 0.8)
 }
-
-
