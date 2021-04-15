@@ -18,7 +18,7 @@ let students = {
 };
 let products = {
   list: [
-    { id: 1, name: "Car", numberproduct: 2 },
+    { id: 1, name: "k5", numberproduct: 10 },
   ],
 };
 

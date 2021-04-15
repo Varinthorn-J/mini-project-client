@@ -5,7 +5,7 @@ import Styles from "../styles/Home.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import config from "../config/config";
-
+import Image from "next/image";
 
 const URL = `${config.URL}/products`;
 const product = ({ token }) => {
@@ -34,7 +34,7 @@ const product = ({ token }) => {
   return (
     <Layout>
       <div className={Styles.container}>
-        <Navbar />
+        <Navbar /><br></br>
         <br></br>
         {JSON.stringify(products.products)}
         <ul>{printProducts()}</ul>

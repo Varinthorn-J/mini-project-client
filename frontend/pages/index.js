@@ -5,6 +5,14 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 
 export default function Home({ token }) {
+  const addProducts = async (name, numberproduct) => {
+    let product = await axios.post(
+      `${config.URL}/products`,
+
+      { name, numberproduct }
+    );
+    setProducts(product.data);
+  };
   return (
     <Layout>
       <Head>
@@ -14,37 +22,35 @@ export default function Home({ token }) {
         <Navbar />
         <h1>หูฟัง Gaming </h1>
         <div className={styles.pic}>
+          <Image src="/k5.jpg" alt="my picture" width={200} height={200} />
 
-          <Image src="/k5.jpg" alt="my picture" width={360} height={360} />
-          <p>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue</p>
-          <h2>$19.66</h2>
           <div class="button">
-          <button onClick={() => addProducts(name, numberproduct)}>
-            Add to cat
-          </button>
-        </div><br></br>
+            <a href="/k5" className={styles.card}>
+              <h3>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue</h3>
+            </a>
+            <h2>$19.66</h2>
+          </div>
+          <br></br>
 
-          <Image src="/ega.jpg" alt="my picture" width={360} height={360} />
-          <p>EGA หูฟังเกม Type-H6 - Black</p>
-          <h2>$16</h2>
+          <Image src="/ega.jpg" alt="my picture" width={200} height={200} />
           <div class="button">
-          <button onClick={() => addProducts(name, numberproduct)}>
-            Add to cat
-          </button>
-        </div><br></br>
+            <a href="/ega" className={styles.card}>
+              <h3>EGA หูฟังเกม Type-H6 - Black</h3>
+            </a>
+            <h2>$16</h2>
+          </div>
+          <br></br>
 
-          <Image src="/signo.jpg" alt="my picture" width={360} height={360} />
-          <p>SIGNO หูฟังเกม HP-829</p>
-          <h2>$16.63</h2>
+          <Image src="/signo.jpg" alt="my picture" width={200} height={200} />
           <div class="button">
-          <button onClick={() => addProducts(name, numberproduct)}>
-            Add to cat
-          </button>
-        </div><br></br>
-
+            <a href="/signo" className={styles.card}>
+              <h3>SIGNO หูฟังเกม HP-829</h3>
+            </a>
+            <h2>$16.63</h2>
+          </div>
+          <br></br>
         </div>
       </div>
-      
     </Layout>
   );
 }

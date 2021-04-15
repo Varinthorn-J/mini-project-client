@@ -9,18 +9,32 @@
   font-size: 20px;
 }
 
-.pic{
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    
+.pic {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
 }
+.k5 {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.home {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  border-radius: 15px;
+  border: 0.1px solid #ffffff;
+  color: #030303;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+ text-align: center;
+  font-size: 0.8rem;
+}
+
 .foo {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-
   align-items: left;
   border-radius: 10px;
   font-size: 20px;
@@ -31,7 +45,6 @@
   border-radius: 15px;
   text-align: center;
   border: 1px;
-  
 }
 .content {
   min-width: 25vw;

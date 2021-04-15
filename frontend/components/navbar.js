@@ -7,9 +7,9 @@ const Navbar = () => (
         <Link href="/register"><a> Register </a></Link>  |
         <Link href="/profile"><a> Profile </a></Link> | 
         {/* <Link href="/getConfig"><a> Config </a></Link> |  */}
-        <Link href="/foo"><a>Foo</a></Link> |
+        <Link href="/foo"><a>About Product</a></Link> |
         {/* <Link href="/students"><a>Students</a></Link> | */}
-        <Link href="/products"><a>Product</a></Link> |
+        <Link href="/products"><a>add product</a></Link> |
         <Link href="/logout"><a> Logout </a></Link> 
     </div>
 )

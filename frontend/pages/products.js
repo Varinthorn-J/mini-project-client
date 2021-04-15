@@ -6,6 +6,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";
 import config from "../config/config";
+import Image from "next/image";
 
 const URL = `${config.URL}/products`;
 const Products = ({ token }) => {
@@ -46,30 +47,29 @@ const Products = ({ token }) => {
     setProducts(product.data);
   };
 
-
-
   const printProducts = () => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
         <li key={index}>
-          name: {item.name}, numberproduct: {item.numberproduct}
-          <button onClick={() => updateProducts(item.id)}>Update</button>
-          <button onClick={() => deleteProducts(item.id)}>Delete</button>
+          <div className={Styles.pic}>
+            <Image src="/ega.jpg" width={200} height={200} />
+            <br></br>
+          </div>
+          name: {item.name}
+          number: {item.numberproduct}
+          <button onClick={() => updateProducts(item.id)}>แก้ไข</button>
+          <button onClick={() => deleteProducts(item.id)}>ลบ</button>
         </li>
       ));
-      
   };
-  
+
   return (
-    
     <Layout>
       <div className={Styles.container}>
-        
         <Navbar />
         <br></br>
-        <ul>{printProducts()}</ul>
-        <h2>Insert Products</h2>
 
+        <h1>Insert Products</h1>
         <input
           className={Styles.formproduct}
           /*name*/
@@ -92,8 +92,8 @@ const Products = ({ token }) => {
           <button onClick={() => addProducts(name, numberproduct)}>
             Add to cat
           </button>
-          <button onClick={() => getProducts(name, numberproduct)}>get</button>
         </div>
+        <ul>{printProducts()}</ul>
       </div>
     </Layout>
   );

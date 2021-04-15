@@ -42,8 +42,10 @@ const Profile1 = ({ token }) => {
         <div>
           <b>Token:</b> {token.substring(0, 15)}...
           <button onClick={copyText}> Copy token </button>
-        </div><br></br>
+        </div>
+        <br></br>
         <div>{JSON.stringify(user)}</div>
+
         <br></br>
       </div>
     </Layout>
