@@ -58,28 +58,35 @@ export default function Login({ token }) {
       </Head>
       <div className={styles.container}>
         <Navbar />
-        <h1>Login</h1>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
 
-        <br />
-        <div>
-          Status: {status}
-          check: {ischeck}
-        </div>
-        <br />
-        {loginForm()}
-        <div>
-          <input
-            type="checkbox"
-            name="IsRememberMe"
-            onChange={(e) => setRemember(e.target.value)}
-          />
-          Remember me!
+        <div className={styles.log}>
+          <h1>Login</h1>
           <br />
+          <div>
+            Status: {status}
+            check: {ischeck}
+          </div>
           <br />
-        </div>
+          {loginForm()}
+          <div>
+            <input
+              type="checkbox"
+              name="IsRememberMe"
+              onChange={(e) => setRemember(e.target.value)}
+            />
+            Remember me!
+            <br />
+            <br />
+          </div>
 
-        <div>
-          <button onClick={login}>Login</button>
+          <div>
+            <button onClick={login}>Login</button>
+          </div>
         </div>
       </div>
     </Layout>
