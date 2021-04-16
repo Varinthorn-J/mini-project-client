@@ -25,13 +25,13 @@ const product = ({ token }) => {
   const printProducts = () => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
-        <li key={index}>
+        <div key={index}>
            <div className={Styles.pic}>
-            <Image  className={styles.immage} src="/ega.jpg" width={200} height={200} />
+            <Image src="/ega.jpg" width={200} height={200} />
             <br></br>
           </div>
           name: {item.name}, numberproduct: {item.numberproduct}
-        </li>
+        </div>
       ));
   };
 

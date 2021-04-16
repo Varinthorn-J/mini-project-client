@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import config from "../config/config";
 import Image from "next/image";
+import Router from "next/router";
 
 const URL = `${config.URL}/products`;
 const Products = ({ token }) => {
@@ -50,7 +51,7 @@ const Products = ({ token }) => {
   const printProducts = () => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
-        <li key={index}>
+        <div key={index}>
           <div className={Styles.pic}>
             <Image  className={Styles.immage} src="/ega.jpg" width={200} height={200} />
             <br></br>
@@ -59,9 +60,14 @@ const Products = ({ token }) => {
           number: {item.numberproduct}
           <button onClick={() => updateProducts(item.id)}>แก้ไข</button>
           <button onClick={() => deleteProducts(item.id)}>ลบ</button>
-        </li>
+          <button onClick={() => handleClickIndex()}>สั่งซื้อสินค้า</button>
+        </div>
       ));
   };
+  const handleClickIndex = () =>
+    Router.push({
+      pathname: "/foo",
+    });
 
   return (
     <Layout>
@@ -91,9 +97,6 @@ const Products = ({ token }) => {
         <div class="button">
           <button onClick={() => addProducts(name, numberproduct)}>
             เพิ่มลงรถเข็น
-          </button>
-          <button onClick={() => getProducts(name, numberproduct)}>
-            ดำเนินการชำระเงิน
           </button>
         </div>
         <ul>{printProducts()}</ul>

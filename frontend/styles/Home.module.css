@@ -13,31 +13,58 @@
   text-align: center;
   margin: 10px;
   padding: 10px;
- 
 }
 
 .immage {
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    background-color: #d6d3a5;
-    border-radius: 15px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #d6d3a5;
+  border-radius: 15px;
 }
-.ega{
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    background-color: #9fe789;
-    box-shadow: #fed6e3;
-    border-radius: 15px;
+.ega {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #9fe789;
+  box-shadow: #fed6e3;
+  border-radius: 15px;
 }
 
-.sig{
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    background-color: #7da9db;
-    border-radius: 15px;
+.sig {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #7da9db;
+  border-radius: 15px;
+}
+.bar {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(76, 121, 172);
+}
+.log {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(76, 121, 172);
+ 
+}
+.tocat {
+  background-color: "#4CAF50";
+  border: "none";
+  color: "white";
+  padding: "10px 10px";
+  text-align: "center";
+  text-decoration: "none";
+  display: "inline-block";
+  font-size: "16px";
+  margin: "4px 2px";
+  cursor: "pointer";
 }
 .home {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
@@ -46,7 +73,7 @@
   color: #030303;
   padding: 10px 20px;
   letter-spacing: 1px;
- text-align: center;
+  text-align: center;
   font-size: 0.8rem;
 }
 
@@ -94,11 +121,12 @@
 }
 
 .gridContainer > div > input {
-  width: 100%;
-  padding: 2px 2px;
-  margin: 0px 0;
+  width:65%;
+  padding: 5px 2px;
+  margin: 1px 0;
   box-sizing: border-box;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-align: center;
   border-radius: 10px;
   border: rgba(226, 239, 241, 0.8);
 }
