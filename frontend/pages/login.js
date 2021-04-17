@@ -23,13 +23,13 @@ export default function Login({ token }) {
       console.log("result: ", result);
       console.log("result.data:  ", result.data);
       console.log("token:  ", token);
-      setStatus(result.status + ": " + result.data.user.username);
+      setStatus("login success");
     } catch (e) {
       console.log("error: ", JSON.stringify(e.response));
       setStatus(JSON.stringify(e.response).substring(0, 80) + "...");
     }
   };
-  const  rergisform = () =>
+  const rergisform = () =>
     Router.push({
       pathname: "/register",
     });
@@ -37,24 +37,25 @@ export default function Login({ token }) {
   const loginForm = () => (
     <div class={styles.gridContainer}>
       <div className={styles.form}>
-      <div>
-        <input
-          type="text"
-          name="username"
-          placeholder="username"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </div>
+        <div>
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
 
-      <div>
-        <input
-          type="password"
-          name="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
       </div>
-    </div></div>
+    </div>
   );
 
   return (
@@ -72,11 +73,12 @@ export default function Login({ token }) {
 
         <div className={styles.log}>
           <h1>Login</h1>
-          <br />
+         
           <div>
             <h2>
-              Status: {status}
               check: {ischeck}
+              <br></br>
+              {status}
             </h2>
           </div>
           <br />
@@ -93,8 +95,10 @@ export default function Login({ token }) {
           </div>
 
           <div>
-          <button onClick={() => rergisform()}>sign up</button>
-            <button class="ghost" onClick={login}>sign in</button>
+            <button onClick={() => rergisform()}>sign up</button>
+            <button class="ghost" onClick={login}>
+              sign in
+            </button>
           </div>
         </div>
       </div>
