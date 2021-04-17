@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar";
 import axios from "axios";
 import config from "../config/config";
+import Router from "next/router";
 
 export default function Register({ token }) {
   const [name, setName] = useState("");
@@ -41,7 +42,8 @@ export default function Register({ token }) {
   };
 
   const registerForm = () => (
-    <div className={styles.gridContainer}>
+     <div className={styles.gridContainer}>
+    <div className={styles.form}>
       <div>
         <input
           type="text"
@@ -50,7 +52,7 @@ export default function Register({ token }) {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-  <br></br>
+  
       <div>
         <input
           type="text"
@@ -59,7 +61,7 @@ export default function Register({ token }) {
           onChange={(e) => setSurname(e.target.value)}
         />
       </div>
-      <br></br>
+     
       <div>
         <input
           type="text"
@@ -68,7 +70,7 @@ export default function Register({ token }) {
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
-      <br></br>
+      
       <div>
         <input
           type="email"
@@ -77,7 +79,7 @@ export default function Register({ token }) {
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <br></br>
+      
       <div>
         <input
           type="password"
@@ -86,8 +88,13 @@ export default function Register({ token }) {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
+      </div>
     </div>
   );
+  const  loginpage = () =>
+  Router.push({
+    pathname: "/login",
+  });
 
   return (
     <Layout>
@@ -98,15 +105,18 @@ export default function Register({ token }) {
         <Navbar />
         <br></br>
         <br></br>
-        <div className={styles.log}>
-          <h1>Register</h1>
+        <div className={styles.regis}>
+          <h1>Create Account</h1>
           <br />
+         
           Status: {status}
           <br />
           <br />
           <div className={styles.content}>{registerForm()}</div><br></br>
           <div>
-            <button onClick={register}>Register</button>
+            <button onClick={register}>sign up</button>
+            <button onClick={() => loginpage()}>sign in</button>
+            
           </div>
         </div>
       </div>

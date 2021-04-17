@@ -36,7 +36,7 @@ export default function Home({ token }) {
       </Head>
       <div className={styles.container}>
         <Navbar />
-        <h1>หูฟัง Gaming </h1>
+        <h3>ลายละเอียดสินค้า</h3>
         <div className={styles.pic}>
          
           <Image  className={styles.immage} src="/signo.jpg" alt="my picture" width={200} height={200} />

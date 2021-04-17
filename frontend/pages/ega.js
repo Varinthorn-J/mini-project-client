@@ -36,7 +36,7 @@ export default function Home({ token }) {
       </Head>
       <div className={styles.container}>
         <Navbar />
-        <h1>หูฟัง Gaming </h1>
+        <h3>ลายละเอียดสินค้า</h3>
         <div className={styles.pic}>
           <Image  className={styles.immage} src="/ega.jpg" alt="my picture" width={200} height={200} />
           <h3>EGA หูฟังเกม Type-H6 - Black..<button onClick={copyText}> Copy </button></h3>

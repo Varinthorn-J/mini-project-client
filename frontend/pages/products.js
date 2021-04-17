@@ -56,11 +56,14 @@ const Products = ({ token }) => {
             <Image  className={Styles.immage} src="/ega.jpg" width={200} height={200} />
             <br></br>
           </div>
+         
           name: {item.name}
           number: {item.numberproduct}
+           <div className={Styles.buttonproduct}>
           <button onClick={() => updateProducts(item.id)}>แก้ไข</button>
           <button onClick={() => deleteProducts(item.id)}>ลบ</button>
           <button onClick={() => handleClickIndex()}>สั่งซื้อสินค้า</button>
+        </div>
         </div>
       ));
   };
@@ -94,7 +97,7 @@ const Products = ({ token }) => {
         ></input>
         <br></br>
 
-        <div class="button">
+        <div className={Styles.buttonproduct}>
           <button onClick={() => addProducts(name, numberproduct)}>
             เพิ่มลงรถเข็น
           </button>

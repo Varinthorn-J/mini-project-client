@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur");
 .container {
-  min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
-  font-size: 20px;
+  font-size: 18px;
+  width: auto;
+  height: auto;
+
+  
 }
 
 .pic {
@@ -21,7 +23,15 @@
   padding: 10px;
   background-color: #d6d3a5;
   border-radius: 15px;
+
 }
+
+.buttonproduct{
+  border-radius: 20px;
+  border: 10px;
+  text-align: center;
+ 
+  }
 .ega {
   text-align: center;
   margin: 10px;
@@ -40,20 +50,46 @@
 }
 .bar {
   display: block;
-  color: #ffffff;
+  color: #494949;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: rgb(76, 121, 172);
+  background-color: rgb(177, 219, 243);
+  border-radius: 20px;
+  box-shadow: 0 8px 6px -6px black;
+}
+.bar :hover {
+  background-color: rgb(199, 199, 199);
+  border-radius: 20px;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 .log {
-  display: block;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  background-color: rgb(76, 121, 172);
- 
+  background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
 }
+.regis {
+  background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+  text-align: center;
+}
+/* .log :hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+} */
 .tocat {
   background-color: "#4CAF50";
   border: "none";
@@ -121,7 +157,7 @@
 }
 
 .gridContainer > div > input {
-  width:65%;
+  width: 65%;
   padding: 5px 2px;
   margin: 1px 0;
   box-sizing: border-box;

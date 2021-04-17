@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 import config from "../config/config";
+import Router from "next/router";
 
 export default function Login({ token }) {
   const [username, setUsername] = useState("");
@@ -28,9 +29,14 @@ export default function Login({ token }) {
       setStatus(JSON.stringify(e.response).substring(0, 80) + "...");
     }
   };
+  const  rergisform = () =>
+    Router.push({
+      pathname: "/register",
+    });
 
   const loginForm = () => (
     <div class={styles.gridContainer}>
+      <div className={styles.form}>
       <div>
         <input
           type="text"
@@ -48,7 +54,7 @@ export default function Login({ token }) {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-    </div>
+    </div></div>
   );
 
   return (
@@ -68,8 +74,10 @@ export default function Login({ token }) {
           <h1>Login</h1>
           <br />
           <div>
-            Status: {status}
-            check: {ischeck}
+            <h2>
+              Status: {status}
+              check: {ischeck}
+            </h2>
           </div>
           <br />
           {loginForm()}
@@ -79,13 +87,14 @@ export default function Login({ token }) {
               name="IsRememberMe"
               onChange={(e) => setRemember(e.target.value)}
             />
-            Remember me!
+            <p>Remember me!</p>
             <br />
             <br />
           </div>
 
           <div>
-            <button onClick={login}>Login</button>
+          <button onClick={() => rergisform()}>sign up</button>
+            <button class="ghost" onClick={login}>sign in</button>
           </div>
         </div>
       </div>
