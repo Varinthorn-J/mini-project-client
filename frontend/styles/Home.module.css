@@ -80,8 +80,10 @@
   padding: 14px 16px;
   text-decoration: none;
   background-color: rgb(241, 67, 55);
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 0 8px 6px -6px black;
+  width: 200%;
+
 }
 .bar :hover {
   background-color: rgb(199, 199, 199);
