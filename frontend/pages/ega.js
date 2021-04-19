@@ -36,10 +36,10 @@ export default function Home({ token }) {
       </Head>
       <div className={styles.container}>
         <Navbar />
-        <h3>ลายละเอียดสินค้า</h3>
+        <h3> Product detail </h3>
         <div className={styles.pic}>
           <Image  className={styles.immage} src="/ega.jpg" alt="my picture" width={200} height={200} />
-          <h3>EGA หูฟังเกม Type-H6 - Black..<button onClick={copyText}> Copy </button></h3>
+          <h3> หูฟัง Gaming รุ่น EGA Type-H6 - Black <button onClick={copyText}> Copy </button></h3>
         ชื่อแบรนด์ : EGA  <br></br>
         รุ่น : Type-H6 <br></br>
         สี : Black<br></br>

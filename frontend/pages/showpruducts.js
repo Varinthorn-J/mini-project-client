@@ -29,7 +29,9 @@ const product = ({ token }) => {
            <div className={Styles.pic}>
             <Image src="/ega.jpg" width={200} height={200} />
             <br></br>
+            <br></br>
           </div>
+      
           name: {item.name}, numberproduct: {item.numberproduct}
         </div>
       ));
@@ -41,6 +43,7 @@ const product = ({ token }) => {
         <Navbar /><br></br>
         <br></br>
          <ul>{printProducts()}</ul>
+         <br></br>
         {JSON.stringify(products.products)}
        
       </div>

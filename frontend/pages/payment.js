@@ -15,7 +15,7 @@ export default function Home({ token }) {
     setProducts(product.data);
   };
 
-  const paymoney = () => Router.push({ pathname: "/students" });
+  const paymoney = () => Router.push({ pathname: "/Paymenysuccess" });
 
   return (
     <Layout>
@@ -24,7 +24,8 @@ export default function Home({ token }) {
       </Head>
       <div className={styles.container}>
         <Navbar />
-        <h1>pay money</h1>
+        <br></br><br></br>
+        <h1>Payment</h1>
         <div className={styles.pic}>
           <Image  className={styles.immage} src="/ega.jpg" alt="my picture" width={200} height={200} />
           <p>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue</p>

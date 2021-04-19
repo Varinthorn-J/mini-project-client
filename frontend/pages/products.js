@@ -52,24 +52,30 @@ const Products = ({ token }) => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
         <div key={index}>
+          <br></br>
           <div className={Styles.pic}>
-            <Image  className={Styles.immage} src="/ega.jpg" width={200} height={200} />
+            <Image
+              className={Styles.immage}
+              src="/ega.jpg"
+              width={200}
+              height={200}
+            />
             <br></br>
           </div>
-         
           name: {item.name}
           number: {item.numberproduct}
-           <div className={Styles.buttonproduct}>
-          <button onClick={() => updateProducts(item.id)}>แก้ไข</button>
-          <button onClick={() => deleteProducts(item.id)}>ลบ</button>
-          <button onClick={() => handleClickIndex()}>สั่งซื้อสินค้า</button>
-        </div>
+          <br></br> <br></br> <br></br>
+          <div >
+            <button  className={Styles.buttonproductupdate} onClick={() => updateProducts(item.id)}>แก้ไข</button>
+            <button  className={Styles.buttonproductdelete} onClick={() => deleteProducts(item.id)}>ลบ</button>
+            <button  className={Styles.buttonproductby} onClick={() => handleClickIndex()}>สั่งซื้อสินค้า</button>
+          </div>
         </div>
       ));
   };
   const handleClickIndex = () =>
     Router.push({
-      pathname: "/foo",
+      pathname: "/payment",
     });
 
   return (
@@ -86,8 +92,6 @@ const Products = ({ token }) => {
           placeholder="ชื่อสินค้า"
           onChange={(e) => setname(e.target.value)}
         ></input>
-        <br></br>
-
         <input
           className={Styles.formproduct}
           /*numberproduct*/
@@ -97,8 +101,8 @@ const Products = ({ token }) => {
         ></input>
         <br></br>
 
-        <div className={Styles.buttonproduct}>
-          <button onClick={() => addProducts(name, numberproduct)}>
+        <div>
+          <button  className={Styles.buttonproduct} onClick={() => addProducts(name, numberproduct)}>
             เพิ่มลงรถเข็น
           </button>
         </div>

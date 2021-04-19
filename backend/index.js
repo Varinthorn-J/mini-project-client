@@ -17,9 +17,7 @@ let students = {
   ],
 };
 let products = {
-  list: [
-    { id: 1, name: "k5", numberproduct: 10 },
-  ],
+  list: [{ id: 1, name: "k5", numberproduct: 10 }],
 };
 
 require("./passport.js");
@@ -35,74 +33,12 @@ router.use(express.urlencoded({ extended: false }));
 
 //Get Foo
 router.get(
-  "/foo",
+  "/Payment",
   passport.authenticate("jwt", { session: false }),
   (req, res, next) => {
-    res.send({ status: "Foo" });
+    res.send({ status: "Payment" });
   }
 );
-//student
-router.route("/students").get((req, res) => res.json(students));
-
-router.post(
-  "/students",
-  // passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    try {
-      let newStudent = {};
-      newStudent.id = students.list.length
-        ? students.list[students.list.length - 1].id + 1
-        : 1;
-      newStudent.fname = req.body.fname;
-      newStudent.surname = req.body.surname;
-      newStudent.major = req.body.major;
-      newStudent.gpa = req.body.gpa;
-
-      students = { list: [...students.list, newStudent] };
-      res.json(students);
-    } catch {
-      res.json({ status: "Add Fail" });
-    }
-  }
-);
-router
-  .route("/students/:std_id")
-  .get((req, res) => {
-    let ID = students.list.findIndex((item) => item.id === +req.params.std_id);
-    if (ID >= 0) {
-      res.json(students.list[ID]);
-    } else {
-      res.json({ status: "Student Error can't find!" });
-    }
-  })
-
-  .put((req, res) => {
-    let ID = students.list.findIndex((item) => item.id === +req.params.std_id);
-
-    if (ID >= 0) {
-      students.list[ID].fname = req.body.fname;
-      students.list[ID].surname = req.body.surname;
-      students.list[ID].major = req.body.major;
-      students.list[ID].gpa = req.body.gpa;
-
-      res.json(students);
-    } else {
-      res.json({ status: "Student Error can't find!" });
-    }
-  })
-
-  .delete((req, res) => {
-    let ID = students.list.findIndex((item) => item.id === +req.params.std_id);
-
-    if (ID >= 0) {
-      students.list = students.list.filter(
-        (item) => item.id !== +req.params.std_id
-      );
-      res.json(students);
-    } else {
-      res.json({ status: "Student Error can't find!" });
-    }
-  });
 
 //product
 router.route("/products").get((req, res) => res.json(products));
@@ -132,7 +68,7 @@ router
     if (ID >= 0) {
       res.json(products.list[ID]);
     } else {
-      res.json({ status: "Student Error can't find!" });
+      res.json({ status: "Product Error can't find!" });
     }
   })
 
@@ -140,9 +76,9 @@ router
     let ID = products.list.findIndex((item) => item.id === +req.params.pd_id);
 
     if (ID >= 0) {
-     products.list[ID].name = req.body.name;
-     products.list[ID].numberproduct = req.body.numberproduct;
-    
+      products.list[ID].name = req.body.name;
+      products.list[ID].numberproduct = req.body.numberproduct;
+
       res.json(products);
     } else {
       res.json({ status: "Product Error can't find!" });
@@ -184,6 +120,7 @@ router.post("/login", (req, res, next) => {
       );
       res.statusCode = 200;
       return res.json({ user, token });
+      
     } else return res.status(422).json(info);
   })(req, res, next);
 });
@@ -215,8 +152,8 @@ router.get(
 router.post("/register", async (req, res) => {
   try {
     const SALT_ROUND = 10;
-    const { name,surname,username, email, password } = req.body;
-    if (!name|| !surname|| !username || !email || !password)
+    const { name, surname, username, email, password } = req.body;
+    if (!name || !surname || !username || !email || !password)
       return res.json({ message: "Cannot register with empty string" });
     if (db.checkExistingUser(username) !== db.NOT_FOUND)
       return res.json({ message: "Duplicated user" });

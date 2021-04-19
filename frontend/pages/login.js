@@ -73,15 +73,15 @@ export default function Login({ token }) {
 
         <div className={styles.log}>
           <h1>Login</h1>
-         
+
           <div>
-            <h2>
+            <p>
               check: {ischeck}
               <br></br>
-              {status}
-            </h2>
+            </p>
+            {status}
           </div>
-          <br />
+         
           {loginForm()}
           <div>
             <input
@@ -90,13 +90,16 @@ export default function Login({ token }) {
               onChange={(e) => setRemember(e.target.value)}
             />
             <p>Remember me!</p>
-            <br />
-            <br />
           </div>
 
           <div>
-            <button onClick={() => rergisform()}>sign up</button>
-            <button class="ghost" onClick={login}>
+            <button
+              className={styles.buttonregisup}
+              onClick={() => rergisform()}
+            >
+              sign up
+            </button>
+            <button className={styles.buttonregis} onClick={login}>
               sign in
             </button>
           </div>

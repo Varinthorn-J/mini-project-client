@@ -5,15 +5,12 @@ import styles from "../styles/Home.module.css";
 
 const Navbar = () => (
     <div className={styles.bar}>
-        <Link href="/"><a>หน้าเเรก </a></Link> |
-         <Link href="/login"><a> ล็อกอิน </a></Link> |
-        <Link href="/register"><a> ลงทะเบียน </a></Link>  |
-        {/* <Link href="/profile"><a> ข้อมูลส่วนตัว </a></Link> |  */}
-        {/* <Link href="/getConfig"><a> Config </a></Link> |  */}
-        <Link href="/foo"><a>ชำระเงิน</a></Link> |
-        {/* <Link href="/students"><a>Students</a></Link> | */}
-        <Link href="/products"><a>รถเข็น</a></Link> |
-        <Link href="/logout"><a> ออกจากระบบ </a></Link> 
+        <Link href="/"><a> Home </a></Link> |
+         <Link href="/login"><a> Sign In </a></Link> |
+        <Link href="/register"><a> Sign Up </a></Link>  |
+        {/* <Link href="/payment"><a> Payment </a></Link> | */}
+        <Link href="/products"><a> Cart </a></Link> |
+        <Link href="/logout"><a> Sign Out </a></Link> 
     </div> 
 
 )

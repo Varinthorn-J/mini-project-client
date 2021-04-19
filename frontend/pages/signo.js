@@ -36,13 +36,13 @@ export default function Home({ token }) {
       </Head>
       <div className={styles.container}>
         <Navbar />
-        <h3>ลายละเอียดสินค้า</h3>
+        <h3> Product detail </h3>
         <div className={styles.pic}>
          
           <Image  className={styles.immage} src="/signo.jpg" alt="my picture" width={200} height={200} />
           <div class="button">
             <a href="/foo" className={styles.card}>
-              <h3>SIGNO หูฟังเกม HP-829..<button onClick={copyText}> Copy </button></h3>
+              <h3> หูฟัง Gaming รุ่น SIGNO HP-829 <button onClick={copyText}> Copy </button></h3>
               SIGNO หูฟังเกม HP-825 <br></br>
               ชื่อแบรนด์ : SIGNO <br></br>
               รุ่น : HP-825 <br></br>

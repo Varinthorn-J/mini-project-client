@@ -24,16 +24,45 @@
 }
 
 .buttonproduct {
+  margin: 10px;
   border-radius: 20px;
   border: 10px;
   text-align: center;
+  background-color: rgb(8, 202, 73);
+
+}
+.buttonproductby {
+  margin: 10px;
+  border-radius: 20px;
+  border: 10px;
+  text-align: center;
+  background-color: rgb(8, 202, 73);
+
+}
+.copy{
+  background-color: rgb(255, 223, 223);
+}
+
+.buttonproductdelete{
+  margin: 10px;
+  border-radius: 20px;
+  border: 10px;
+  text-align: center;
+  background-color: red;
+}
+.buttonproductupdate{
+  margin: 10px;
+  border-radius: 20px;
+  border: 10px;
+  text-align: center;
+  background-color: rgba(0, 162, 255, 0.712);
 }
 .ega {
   text-align: center;
   margin: 10px;
   padding: 10px;
   background-color: #9fe789;
-  box-shadow: #fed6e3;
+  box-shadow: #050505;
   border-radius: 15px;
 }
 
@@ -46,11 +75,11 @@
 }
 .bar {
   display: block;
-  color: #494949;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: rgb(177, 219, 243);
+  background-color: rgb(241, 67, 55);
   border-radius: 20px;
   box-shadow: 0 8px 6px -6px black;
 }
@@ -76,10 +105,22 @@
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: hidden;
-  width: 85%;
+  width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
   text-align: center;
+}
+.buttonregis{
+ margin: 10px;
+ color: white;
+ background-color: green;
+ border: 0;
+}
+.buttonregisup{
+ margin: 10px;
+ color: white;
+ background-color: #ff4b2b;
+ border: 0;
 }
 /* .log :hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
@@ -123,8 +164,8 @@
   text-align: center;
   border: 1px;
 }
-.content {
-  min-width: 25vw;
+.content { 
+  text-align: center;
 }
 
 .gridContainer {

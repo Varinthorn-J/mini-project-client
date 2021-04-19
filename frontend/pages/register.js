@@ -42,59 +42,59 @@ export default function Register({ token }) {
   };
 
   const registerForm = () => (
-     <div className={styles.gridContainer}>
-    <div className={styles.form}>
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="name"
-          onChange={(e) => setName(e.target.value)}
-        />
-      </div>
-  
-      <div>
-        <input
-          type="text"
-          name="surname"
-          placeholder="surname"
-          onChange={(e) => setSurname(e.target.value)}
-        />
-      </div>
-     
-      <div>
-        <input
-          type="text"
-          name="username"
-          placeholder="username"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </div>
-      
-      <div>
-        <input
-          type="email"
-          name="email"
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      
-      <div>
-        <input
-          type="password"
-          name="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
+    <div className={styles.gridContainer}>
+      <div className={styles.form}>
+        <div>
+          <input
+            type="text"
+            name="name"
+            placeholder="name"
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            name="surname"
+            placeholder="surname"
+            onChange={(e) => setSurname(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
       </div>
     </div>
   );
-  const  loginpage = () =>
-  Router.push({
-    pathname: "/login",
-  });
+  const loginpage = () =>
+    Router.push({
+      pathname: "/login",
+    });
 
   return (
     <Layout>
@@ -106,17 +106,17 @@ export default function Register({ token }) {
         <br></br>
         <br></br>
         <div className={styles.regis}>
-          <h1>Create Account</h1>
-          <br />
-         
-          Status: {status}
-          <br />
-          <br />
-          <div className={styles.content}>{registerForm()}</div><br></br>
+          <h3>Create Account</h3>
+          <p>Status: {status}</p>
+          <div className={styles.content}>{registerForm()}</div>
+          <br></br>
           <div>
-            <button onClick={register}>sign up</button>
-            <button onClick={() => loginpage()}>sign in</button>
-            
+            <button className={styles.buttonregisup} onClick={register}>
+              sign up
+            </button>
+            <button className={styles.buttonregis} onClick={() => loginpage()}>
+              sign in
+            </button>
           </div>
         </div>
       </div>

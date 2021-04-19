@@ -1,6 +1,6 @@
 html,
 body {
-  background: #e3cef8;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,18 +11,7 @@ body {
  
 }
 
-/* button{
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-  border-radius: 15px;
-	border: 0.1px solid #ffffff;
-	color: #030303;
-	font-size: 20px;
-	padding: 10px 20px;
-	letter-spacing: 1px;
-	transition: transform 80ms ease-in;
-  margin: 3px;
- 
-} */
+
 
 h1 {
   font-weight: bold;
