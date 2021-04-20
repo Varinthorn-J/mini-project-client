@@ -10,14 +10,10 @@ const { json } = require("express");
 
 const db = require("./database.js");
 let users = db.users;
-// let students = db.students
-let students = {
-  list: [
-    { id: 1, fname: "Warinthon", surname: "Jaitrong", major: "CoE", gpa: 2.5 },
-  ],
-};
+
+
 let products = {
-  list: [{ id: 1, name: "k5", numberproduct: 10 }],
+  list: [{ id: 1, name: " K5 Pro Wired Stereo - Black/Blue", numberproduct: 10 }],
 };
 
 require("./passport.js");
@@ -31,7 +27,7 @@ router.use(cors({ origin: "http://localhost:3000", credentials: true }));
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
-//Get Foo
+//Get payment
 router.get(
   "/Payment",
   passport.authenticate("jwt", { session: false }),

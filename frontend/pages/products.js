@@ -80,8 +80,11 @@ const Products = ({ token }) => {
 
   return (
     <Layout>
+      <div className={Styles.header}>
+       <Navbar />
+       </div>
       <div className={Styles.container}>
-        <Navbar />
+       
         <br></br>
 
         <h1>เพิ่มสินค้า</h1>

@@ -97,12 +97,16 @@ export default function Register({ token }) {
     });
 
   return (
-    <Layout>
+    <Layout> 
+      <div className={styles.header}>
+      <Navbar />
+      </div>
       <Head>
+       
         <title>Register</title>
       </Head>
       <div className={styles.container}>
-        <Navbar />
+       
         <br></br>
         <br></br>
         <div className={styles.regis}>

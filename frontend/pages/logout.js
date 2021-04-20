@@ -23,12 +23,13 @@ export default function Logout({ token }) {
 
   return (
     <Layout>
+      <div className={styles.header}>
+        <Navbar />
+      </div>
       <Head>
         <title>User profile</title>
       </Head>
       <div className={styles.container}>
-        <Navbar />
-        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
         <h1>Logout</h1>
         <div>
           <h3> {status} </h3>

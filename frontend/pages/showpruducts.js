@@ -39,9 +39,11 @@ const product = ({ token }) => {
 
   return (
     <Layout>
+      <div className={Styles.header}>
+       <Navbar />
+       </div>
       <div className={Styles.container}>
-        <Navbar /><br></br>
-        <br></br>
+       
          <ul>{printProducts()}</ul>
          <br></br>
         {JSON.stringify(products.products)}

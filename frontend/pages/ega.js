@@ -31,11 +31,14 @@ export default function Home({ token }) {
   }
   return (
     <Layout>
+       <div className={styles.header}>
+       <Navbar />
+       </div>
       <Head>
         <title>First Page</title>
       </Head>
       <div className={styles.container}>
-        <Navbar />
+      
         <h3> Product detail </h3>
         <div className={styles.pic}>
           <Image  className={styles.immage} src="/ega.jpg" alt="my picture" width={200} height={200} />

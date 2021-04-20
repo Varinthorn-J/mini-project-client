@@ -60,17 +60,13 @@ export default function Login({ token }) {
 
   return (
     <Layout>
+      <div className={styles.header}>
+        <Navbar />
+      </div>
       <Head>
         <title>Login</title>
       </Head>
       <div className={styles.container}>
-        <Navbar />
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
         <div className={styles.log}>
           <h1>Login</h1>
 
@@ -81,7 +77,7 @@ export default function Login({ token }) {
             </p>
             {status}
           </div>
-         
+
           {loginForm()}
           <div>
             <input

@@ -1,33 +1,27 @@
-html,
+/* html,
 body {
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  padding: 1px;
-  margin: 10px;
- 
 }
 
-
-
-h1 {
+/* h1 {
   font-weight: bold;
   margin: 0;
 }
 
 h2 {
   text-align: center;
-}
-p {
+} */
+/* p {
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-}
+} */
 
 a {
   color: inherit;
@@ -94,4 +88,4 @@ b {
 
 * {
   box-sizing: border-box;
-}
+} 
