@@ -29,7 +29,7 @@ export default function Home() {
               <a href="/k5" className={styles.card}>
                 <p> หูฟัง Gaming รุ่น K5 Blue - Black </p>
               </a>
-              <h2>$16</h2>
+              <h2>$19.66</h2>
             </div>
           </div>
           <br></br>
@@ -47,7 +47,7 @@ export default function Home() {
                 <a href="/k5" className={styles.card}>
                   <p> หูฟัง Gaming รุ่น K5 Blue - Black </p>
                 </a>
-                <h2>$16</h2>
+                <h2>$19.66</h2>
               </div>
             </div>
           {/* </div> */}
@@ -66,7 +66,7 @@ export default function Home() {
               <a href="/ega" className={styles.card}>
                 <p> หูฟัง Gaming รุ่น EGA Type-H6 - Black </p>
               </a>
-              <h2>$16</h2>
+              <h2>$18</h2>
             </div>
           </div>
           <br></br>
@@ -84,7 +84,7 @@ export default function Home() {
                 <a href="/ega" className={styles.card}>
                   <p> หูฟัง Gaming รุ่น EGA Type-H6 - Black </p>
                 </a>
-                <h2>$16</h2>
+                <h2>$18</h2>
               </div>
             </div>
           {/* </div> */}

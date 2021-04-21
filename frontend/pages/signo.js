@@ -13,7 +13,7 @@ export default function Home({ token }) {
     );
     setProducts(product.data);
   };
-  const CodeName = "หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue. ";
+  const CodeName = "หูฟัง Gaming รุ่น SIGNO HP-829";
   const copyText = () => {
     navigator.clipboard.writeText(CodeName);
   };
@@ -59,7 +59,7 @@ export default function Home({ token }) {
         การรับประกัน : 1 Year <br></br>
         <br></br>
         <div style={style}>
-          <a href="/products" className={styles.card}>
+          <a href="/productssigno" className={styles.card}>
             <h3>ไปยังรถเข็น</h3>
           </a>
         </div>

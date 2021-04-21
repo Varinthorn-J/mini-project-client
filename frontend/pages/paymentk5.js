@@ -15,7 +15,7 @@ export default function Home({ token }) {
     setProducts(product.data);
   };
 
-  const paymoney = () => Router.push({ pathname: "/Paymenysuccessega" });
+  const paymoney = () => Router.push({ pathname: "/Paymenysuccess" });
 
   return (
     <Layout>
@@ -28,9 +28,9 @@ export default function Home({ token }) {
         <h1>Payment</h1>   </div>
         <br></br>
         <div className={styles.image}>
-          <Image  src="/ega.jpg" alt="my picture" width={200} height={200} />
-          <p> Gaming รุ่น EGA Type-H6 - Black</p>
-          <h2> $18 </h2>
+          <Image  src="/k5.jpg" alt="my picture" width={200} height={200} />
+          <p>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue</p>
+          <h2> $19.66 </h2>
         
             <button className={styles.buttonpayment} onClick={() => paymoney()}>ดำเนินการชำระเงิน</button>
           </div>

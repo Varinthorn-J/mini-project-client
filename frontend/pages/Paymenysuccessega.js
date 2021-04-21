@@ -19,8 +19,8 @@ export default function Home({ token }) {
       <div className={styles.image}>
         <Image src="/pass.png" alt="my picture" width={200} height={200} />
         <br></br>
-        <p>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue</p>
-        <h2>$19.66 </h2>
+        <p>หูฟัง Gaming รุ่น EGA Type-H6 - Black</p>
+        <h2>$18 </h2>
       </div>
       <div className={styles.h2}>
         {" "}

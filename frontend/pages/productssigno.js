@@ -55,7 +55,7 @@ const Products = ({ token }) => {
           <br></br>
           <div className={Styles.image}>
           <Image
-            src="/ega.jpg"
+            src="/signo.jpg"
             width={200}
             height={200}
           />
@@ -89,7 +89,7 @@ const Products = ({ token }) => {
   };
   const handleClickIndex = () =>
     Router.push({
-      pathname: "/payment",
+      pathname: "/paymentsigno",
     });
 
   return (

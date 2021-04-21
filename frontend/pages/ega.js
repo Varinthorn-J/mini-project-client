@@ -13,7 +13,7 @@ export default function Home({ token }) {
     );
     setProducts(product.data);
   };
-  const CodeName = "หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue. ";
+  const CodeName = " หูฟัง Gaming รุ่น EGA Type-H6 - Black";
   const copyText = () => {
     navigator.clipboard.writeText(CodeName);
   };

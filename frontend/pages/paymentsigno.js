@@ -15,28 +15,32 @@ export default function Home({ token }) {
     setProducts(product.data);
   };
 
-  const paymoney = () => Router.push({ pathname: "/Paymenysuccessega" });
+  const paymoney = () => Router.push({ pathname: "/Paymenysuccesssigno" });
 
   return (
     <Layout>
-      <div className={styles.header}> <Navbar /></div>
+      <div className={styles.header}>
+        {" "}
+        <Navbar />
+      </div>
       <Head>
         <title>First Page</title>
       </Head>
       <div className={styles.h1}>
-        <br></br>  <br></br>
-        <h1>Payment</h1>   </div>
-        <br></br>
-        <div className={styles.image}>
-          <Image  src="/ega.jpg" alt="my picture" width={200} height={200} />
-          <p> Gaming รุ่น EGA Type-H6 - Black</p>
-          <h2> $18 </h2>
-        
-            <button className={styles.buttonpayment} onClick={() => paymoney()}>ดำเนินการชำระเงิน</button>
-          </div>
-          <br></br>
-       
-   
+        <br></br> <br></br>
+        <h1>Payment</h1>{" "}
+      </div>
+      <br></br>
+      <div className={styles.image}>
+        <Image src="/signo.jpg" alt="my picture" width={200} height={200} />
+        <p>signo Gaming รุ่น Signo - Black</p>
+        <h2> $16 </h2>
+
+        <button className={styles.buttonpayment} onClick={() => paymoney()}>
+          ดำเนินการชำระเงิน
+        </button>
+      </div>
+      <br></br>
     </Layout>
   );
 }
