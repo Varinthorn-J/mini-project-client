@@ -69,19 +69,19 @@ const Products = ({ token }) => {
               className={Styles.buttonproductupdate}
               onClick={() => updateProducts(item.id)}
             >
-              แก้ไข
+              Update
             </button>
             <button
               className={Styles.buttonproductdelete}
               onClick={() => deleteProducts(item.id)}
             >
-              ลบ
+              Delete
             </button>
             <button
               className={Styles.buttonproductby}
               onClick={() => handleClickIndex()}
             >
-              สั่งซื้อสินค้า
+              Place an order
             </button>
           </div>
         </div>
@@ -98,19 +98,19 @@ const Products = ({ token }) => {
         <Navbar />
       </div>
       <div className={Styles.container}>
-        <h1>เพิ่มสินค้า</h1>
+        <h1>Add Product</h1>
         <input
           className={Styles.formproduct}
           /*name*/
           type="text"
-          placeholder="ชื่อสินค้า"
+          placeholder="buy product"
           onChange={(e) => setname(e.target.value)}
         ></input>
         <input
           className={Styles.formproduct}
           /*numberproduct*/
           type="text"
-          placeholder="จำนวน"
+          placeholder="number"
           onChange={(e) => setnumberproduct(e.target.value)}
         ></input>
         <br></br>
@@ -120,7 +120,7 @@ const Products = ({ token }) => {
             className={Styles.buttonproduct}
             onClick={() => addProducts(name, numberproduct)}
           >
-            เพิ่มลงรถเข็น
+           add to cart
           </button>
         </div>
 

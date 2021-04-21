@@ -32,7 +32,7 @@ export default function Home({ token }) {
           <p> Gaming รุ่น EGA Type-H6 - Black</p>
           <h2> $18 </h2>
         
-            <button className={styles.buttonpayment} onClick={() => paymoney()}>ดำเนินการชำระเงิน</button>
+            <button className={styles.buttonpayment} onClick={() => paymoney()}>Proceed to payment</button>
           </div>
           <br></br>
        

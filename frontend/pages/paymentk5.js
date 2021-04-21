@@ -32,7 +32,7 @@ export default function Home({ token }) {
           <p>หูฟัง Gaming รุ่น K5 Pro Wired Stereo - Black/Blue</p>
           <h2> $19.66 </h2>
         
-            <button className={styles.buttonpayment} onClick={() => paymoney()}>ดำเนินการชำระเงิน</button>
+            <button className={styles.buttonpayment} onClick={() => paymoney()}>Proceed to payment</button>
           </div>
           <br></br>
        

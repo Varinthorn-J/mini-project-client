@@ -11,7 +11,7 @@ export default function Home() {
         <Navbar />
       </div>
       <div className={styles.h1}>
-        <h1>HeadPhones Gaming</h1>
+        <h1>Gaming-Headphone</h1>
       </div>
       <div className={styles.row}>
         <div></div>

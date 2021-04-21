@@ -26,7 +26,7 @@ const product = ({ token }) => {
     if (products.list && products.list.length)
       return products.list.map((item, index) => (
         <div key={index}>
-           <div className={Styles.pic}>
+           <div className={Styles.image}>
             <Image src="/ega.jpg" width={200} height={200} />
             <br></br>
             <br></br>

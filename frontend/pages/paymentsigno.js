@@ -37,7 +37,7 @@ export default function Home({ token }) {
         <h2> $16 </h2>
 
         <button className={styles.buttonpayment} onClick={() => paymoney()}>
-          ดำเนินการชำระเงิน
+        Proceed to payment
         </button>
       </div>
       <br></br>
