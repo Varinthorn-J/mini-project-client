@@ -2,19 +2,16 @@ const bcrypt = require('bcrypt')
 
 let users = {
     users: [
-        { id: 1, username: 'warodom', password: '$2b$10$0AsMSQaUB0AlLnKzgeUOfOE.hWUodtuR4NOU954XLVy2gy3lBWsdO', email: 'wwarodom@gmail.com', ischeck: 'No' },
+        { id: 1, username: 'warinthon', password: '$2b$10$0AsMSQaUB0AlLnKzgeUOfOE.hWUodtuR4NOU954XLVy2gy3lBWsdO', email: 'wwarodom@gmail.com', ischeck: 'No' },
         { id: 2, username: 'john', password: '$2b$10$1Bu4tImM/Ms9rtU.8/n/COWpzUAGFB6YlsO5xZqFih1JUxafyFFXa', email: 'john@gmail.com', ischeck: 'No' },
     ]
 }
 
-let students = {
-    students: [
-        { id: 1, fname: "Warinthon", surname: "Jaitrongg", major: "CoE", gpa: 2.5 }
-    ]
-}
+
+
 let products = {
     products: [
-        { id: 1, name: "Warinthon", numberproduct: 10}
+        { id: 1, name: "K5 Black", numberproduct: 10 }
     ]
 }
 
@@ -26,7 +23,7 @@ const SECRET = 'your_jwt_secret'
 const NOT_FOUND = -1
 
 exports.users = users
-exports.students = students
+
 exports.products = products
 exports.SECRET = SECRET
 exports.NOT_FOUND = NOT_FOUND
